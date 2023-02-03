@@ -15,5 +15,5 @@ module.exports = function(app){
     app.use('/api/list' ,listRoutes);
     app.use('/api/like' ,likeRoutes);
     app.use('/api/comment',commentRoutes);
-    app.use('/api/comment' , commentRoutes);
+    // app.use('/api/comment' , commentRoutes);
 }

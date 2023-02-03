@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-// mongoose.set('strictQuery', true);
 mongoose.set('strictQuery', false);
 const slug = require("mongoose-slug-generator");
 mongoose.plugin(slug);
@@ -28,11 +27,11 @@ const postSchema = new mongoose.Schema({
         type: String,
         // required: true
     },
-    featured:
-    {
-        type: String,
-        // required: true
-    },
+    // featured:
+    // {
+    //     type: String,
+    //     // required: true
+    // },
     like: {
         type: Number,
         default: 0,

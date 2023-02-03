@@ -16,8 +16,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage:storage})
 
-router.post('/add',upload.fields([{name:"featured_image" , maxCount:1},{name:"thumbnail", maxCount:1}]) ,postController.addpost);
+router.post('/add',upload.fields([{name:"thumbnail", maxCount:1}]) ,postController.addpost);
 router.get('/' , postController.postlist);
 router.put('/like',postController.like);
-
+router.delete('/:id' ,postController.postDelete);
+router.put('/:id' ,postController.postUpdate);
 module.exports = router;
